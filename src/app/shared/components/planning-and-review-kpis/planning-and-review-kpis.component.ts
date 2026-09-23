@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   imports: [],
-  selector: 'planning-and-review-kpis',
+  selector: 'app-planning-and-review-kpis',
   styleUrl: './planning-and-review-kpis.component.scss',
   templateUrl: './planning-and-review-kpis.component.html',
   standalone: true

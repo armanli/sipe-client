@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   imports: [],
-  selector: 'flow-banner',
+  selector: 'app-flow-banner',
   styleUrl: './flow-banner.component.scss',
   templateUrl: './flow-banner.component.html',
   standalone: true,

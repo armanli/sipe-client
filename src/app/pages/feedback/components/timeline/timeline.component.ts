@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   imports: [],
-  selector: 'timeline',
+  selector: 'app-timeline',
   styleUrl: './timeline.component.scss',
   templateUrl: './timeline.component.html',
   standalone: true,

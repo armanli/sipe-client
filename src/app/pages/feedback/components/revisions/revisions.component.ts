@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   imports: [],
-  selector: 'revisions',
+  selector: 'app-revisions',
   styleUrl: './revisions.component.scss',
   templateUrl: './revisions.component.html',
   standalone: true,
