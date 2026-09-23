@@ -5,6 +5,7 @@ import { TimelineComponent } from './components/timeline/timeline.component';
 import { RevisionsComponent } from './components/revisions/revisions.component';
 import { Plan } from './models/Plan';
 import { Suggestion } from './models/Suggestion';
+import { AiBoxSuggestionsComponent } from './components/ai-box-suggestions/ai-box-suggestions.component';
 
 @Component({
   selector: 'app-feedback',
@@ -16,6 +17,7 @@ import { Suggestion } from './models/Suggestion';
     FlowBannerComponent,
     TimelineComponent,
     RevisionsComponent,
+    AiBoxSuggestionsComponent,
   ],
 })
 export class FeedbackComponent {

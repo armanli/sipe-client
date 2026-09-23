@@ -1,0 +1,37 @@
+<div class="ai-box-suggestions purple-element">
+  <div class="header">
+    <i class="purple ti ti-sparkles"></i>
+    <div class="title">Sugestões da IA para Correção</div>
+  </div>
+
+  <div class="description">
+    A coordenação solicitou atividade prática e reforço em sistema monetário. Deseja gerar sugestões pedagógicas?
+  </div>
+
+  @if (isLoading()) {
+    <div class="ai-loading visible">
+      <div class="ai-spinner"></div>
+      <span>Gerando sugestões pedagógicas...</span>
+    </div>
+  }
+
+  @if (isGenerated()) {
+    <div class="ai-suggestions visible">
+      @for (suggestion of this.suggestions; track suggestion.text) {
+        <div class="ai-suggestion-item">
+          <i class="ti {{ suggestion.icon }}"></i>
+          <span>{{ suggestion.text }}</span>
+        </div>
+      }
+    </div>
+  }
+
+  @if (!isLoading() && !isGenerated()) {
+    <button class="button purple-element-fill" (click)="generateSuggestions()">
+      <i class="ti ti-bolt"></i>
+      <span>Gerar Sugestões</span>
+    </button>
+  }
+</div>
+
+<div class="toast-container" #toastContainer></div>

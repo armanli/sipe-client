@@ -34,23 +34,6 @@ function selectPlan(id) {
   document.getElementById('notifCard').style.display = id === 1 ? 'block' : 'none';
 }
 
-function generateSuggestions() {
-  if (!selectedPlan) return;
-  const id = selectedPlan;
-  const loading = document.getElementById('aiLoading');
-  const btn = document.querySelector('#aiBox button');
-  loading.classList.add('visible');
-  btn.style.display = 'none';
-
-  setTimeout(() => {
-    loading.classList.remove('visible');
-    suggestionsGenerated[id] = true;
-    renderSuggestions(id);
-    document.getElementById('aiSuggestions').classList.add('visible');
-    showToast('Sugestões pedagógicas geradas com sucesso!', 'info', 'ti-sparkles');
-  }, 1800);
-}
-
 function renderSuggestions(id) {
   const container = document.getElementById('aiSuggestions');
   const data = planData[id];
